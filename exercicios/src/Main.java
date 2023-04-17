@@ -1,3 +1,5 @@
+import java.util.Arrays;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
@@ -46,7 +48,6 @@ public class Main {
         } */
     
         // Fatorial
-        
         /* System.out.print("Digite o numero a ser Fatorado: ");
         int num = scan.nextInt();
         int resul = num;
@@ -54,7 +55,46 @@ public class Main {
             resul *= i;
         }
         imprimir("Resultado de " + num + "! é: " + resul); */
-    
+
+        // Numeros aleatórios
+        Random random = new Random();
+
+        int[] randomNumbers = new int[20];
+
+        for (int i = 0; i < randomNumbers.length; i++) {
+            randomNumbers[i] = random.nextInt(100);
+        }
+
+        imprimir("Numeros aleatórios");
+        for (int num: randomNumbers) {
+            System.out.print(num + " ");
+        }
+        System.out.println("\nAntecessores");
+        for (int num: randomNumbers) {
+            System.out.print((num-1) + " ");
+        }
+
+
+        // Array Bidimensional
+
+        int[][] matriz = new int[4][4];
+
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[i].length; j++) {
+                matriz[i][j] = random.nextInt(9);
+            }
+        }
+
+        System.out.println("\nMatriz montada");
+        for (int[] linha: matriz) {
+            for (int coluna: linha) {
+                System.out.print(coluna + " ");
+            }
+            System.out.println("");
+        }
+
+
+
     
     
     }
